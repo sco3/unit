@@ -8,8 +8,12 @@
     "python": {
       "type": "python 3.12",
       "path": "/var/log/unit/",
-      "module": "unit_asgi",
-      "processes": 1
+      "processes": 1,
+      "targets": {
+        "front": {
+          "module": "unit_asgi"
+        }
+      }
     }
   }
 }
