@@ -7,18 +7,20 @@
   "applications": {
     "python": {
       "type": "python 3.12",
-      "path": "/home/dz/prj/unit",
+      "path": "/home/dz/prj/unit/",
       "processes": 1,
       "targets": {
         "front": {
-          "module": "unit_asgi"
+          "module": "unit_asgi",
+          "callable": "application"
         },
         "end": {
           "module": "unit_asgi_ms",
           "callable": "root"
         }
       },
-      "home": "/home/dz/prj/unit/.venv/"
+      "home": "/home/dz/prj/unit/.venv/",
+      "working_directory": "/home/dz/prj/unit/"
     }
   }
 }
