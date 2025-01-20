@@ -7,13 +7,18 @@
   "applications": {
     "python": {
       "type": "python 3.12",
-      "path": "/var/log/unit/",
+      "path": "/home/dz/prj/unit",
       "processes": 1,
       "targets": {
         "front": {
           "module": "unit_asgi"
+        },
+        "end": {
+          "module": "unit_asgi_ms",
+          "callable": "root"
         }
-      }
+      },
+      "home": "/home/dz/prj/unit/.venv/"
     }
   }
 }
