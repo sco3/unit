@@ -1,11 +1,11 @@
-async def applicaion(scope, receive, send):
-    assert scope["type"] == "http"
+async def application(scope, receive, send):
 
-    await send(
-        {
-            "type": "http.response.start",
-            "status": 200,
-            "headers": [[b"content-type", b"text/plain"]],
-        }
-    )
-    await send({"type": "http.response.body", "body": b"ASGI,  World!"})
+    await send({
+        'type': 'http.response.start',
+        'status': 200
+    })
+
+    await send({
+        'type': 'http.response.body',
+        'body': b'Hello, ASGI\n'
+    })
