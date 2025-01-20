@@ -1,4 +1,4 @@
-async def app(scope, receive, send):
+async def applicaion(scope, receive, send):
     assert scope["type"] == "http"
 
     await send(
@@ -8,4 +8,4 @@ async def app(scope, receive, send):
             "headers": [[b"content-type", b"text/plain"]],
         }
     )
-    await send({"type": "http.response.body", "body": b"Hello, Nginx Unit!"})
+    await send({"type": "http.response.body", "body": b"ASGI,  World!"})
