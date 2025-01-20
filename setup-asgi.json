@@ -10,10 +10,6 @@
       "path": "/home/dz/prj/unit/",
       "processes": 1,
       "targets": {
-        "front": {
-          "module": "unit_asgi",
-          "callable": "application"
-        },
         "end": {
           "module": "unit_asgi_ms",
           "callable": "root"
