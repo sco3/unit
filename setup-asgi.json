@@ -6,13 +6,13 @@
   },
   "applications": {
     "python": {
-      "type": "python 3.12",
+      "type": "python 3.13",
       "path": "/home/dz/prj/unit/",
       "processes": 1,
       "targets": {
         "end": {
           "module": "unit_asgi_ms",
-          "callable": "root"
+          "callable": "app"
         }
       },
       "home": "/home/dz/prj/unit/.venv/",
