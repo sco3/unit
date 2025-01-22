@@ -6,7 +6,7 @@
   },
   "applications": {
     "python": {
-      "type": "python 3.12",
+      "type": "python 3.13",
       "path": "/home/dz/prj/unit/",
       "home": "/home/dz/prj/unit/.venv/",
       "working_directory": "/home/dz/prj/unit/",
