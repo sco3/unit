@@ -6,7 +6,7 @@
   },
   "applications": {
     "python": {
-      "type": "python 3.13",
+      "type": "python 3.12",
       "path": "/home/dz/prj/unit/",
       "processes": 1,
       "targets": {

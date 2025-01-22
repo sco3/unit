@@ -6,12 +6,17 @@
   },
   "applications": {
     "python": {
-      "type": "python 3.13",
-      "path": "/var/log/unit/",
-      "module": "unit_wsgi",
-      "processes": 2
-    },
+      "type": "python 3.12",
+      "path": "/home/dz/prj/unit/",
       "home": "/home/dz/prj/unit/.venv/",
-      "working_directory": "/home/dz/prj/unit/"
+      "working_directory": "/home/dz/prj/unit/",
+      "processes": 1,
+      "targets": {
+        "root": {
+          "module": "unit_wsgi",
+          "callable": "app"
+        }
+      }
+    }
   }
 }

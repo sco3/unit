@@ -1,15 +1,16 @@
 #!/usr/bin/env -S uv run
 
 import granian
+import time
 from fastapi import FastAPI
 
 
 app = FastAPI()
-
+start = time.perf_counter()
 
 @app.get("/")
 async def root():
-    return {"message": "Hello, Fastapi!"}
+    return {"message": "Hello, Fastapi!", "time": time.perf_counter() }
 
 
 if __name__ == "__main__old":
