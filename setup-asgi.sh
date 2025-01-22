@@ -19,5 +19,5 @@ sudo systemctl restart unit
 echo ============================
 echo check logs in /var/log/unit/
 
-sudo tail -f -n 40 /var/log/unit/unit.lo
+sudo tail -f -n 40 /var/log/unit/unit.log
 

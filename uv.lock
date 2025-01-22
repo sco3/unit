@@ -79,12 +79,22 @@ wheels = [
 ]
 
 [[package]]
-name = "h11"
-version = "0.14.0"
+name = "granian"
+version = "1.7.5"
 source = { registry = "https://pypi.org/simple" }
-sdist = { url = "https://files.pythonhosted.org/packages/f5/38/3af3d3633a34a3316095b39c8e8fb4853a28a536e55d347bd8d8e9a14b03/h11-0.14.0.tar.gz", hash = "sha256:8f19fbbe99e72420ff35c00b27a34cb9937e902a8b810e2c88300c6f0a3b699d", size = 100418 }
+dependencies = [
+    { name = "click" },
+    { name = "uvloop", marker = "platform_python_implementation == 'CPython' and sys_platform != 'win32'" },
+]
+sdist = { url = "https://files.pythonhosted.org/packages/7f/6a/d0dfb1a0a82d8108be6c2139e21fe50d53007940bc62bbf59cdfc20f4e37/granian-1.7.5.tar.gz", hash = "sha256:10dcca902d581d45555ae0f4e178996c9bc71006ea66258499b626cc9b76ce02", size = 82003 }
 wheels = [
-    { url = "https://files.pythonhosted.org/packages/95/04/ff642e65ad6b90db43e668d70ffb6736436c7ce41fcc549f4e9472234127/h11-0.14.0-py3-none-any.whl", hash = "sha256:e3fe4ac4b851c468cc8363d500db52c2ead036020723024a109d37346efaa761", size = 58259 },
+    { url = "https://files.pythonhosted.org/packages/3a/09/71d2a2bb5cd311d363709add7614ce452dc30049d1031d135353ea9f6df7/granian-1.7.5-cp313-cp313-macosx_10_12_x86_64.whl", hash = "sha256:df910252f4fd1b0e7afd661ceb43fd26ace022119cddbe672c52e04aeb293bbd", size = 2487246 },
+    { url = "https://files.pythonhosted.org/packages/d6/57/d781a78588f06317096f6cc3873d8943d057004844076b15b820e9f92d14/granian-1.7.5-cp313-cp313-macosx_11_0_arm64.whl", hash = "sha256:a858be2d7469e5942602d122b4436c63143bda51c438fb5ad17ffa9a84f92dc5", size = 2228943 },
+    { url = "https://files.pythonhosted.org/packages/e0/af/6395bca1cdaff1651a93e0d927488428b9ad921d7faa1238e32f93cfcb97/granian-1.7.5-cp313-cp313-manylinux_2_17_aarch64.manylinux2014_aarch64.whl", hash = "sha256:eb47ce673fd70230fb23ba5b37da67877f6f0321f1e4b9bd5ed338bd6575a2db", size = 2211586 },
+    { url = "https://files.pythonhosted.org/packages/bb/de/e95a48d110f7d469b34f72c106d97a4b9a08e53be02323675daaaba6ef00/granian-1.7.5-cp313-cp313-manylinux_2_17_x86_64.manylinux2014_x86_64.whl", hash = "sha256:04420ca042883eed3a9a2282aefd88adb1165a5cebb5679016268c6dfd020f92", size = 2343693 },
+    { url = "https://files.pythonhosted.org/packages/34/78/81c8b1fa6a97d76d2f65cfa1c4010da38df638e793b98994513472c99034/granian-1.7.5-cp313-cp313-musllinux_1_1_aarch64.whl", hash = "sha256:d0ad323a22dbfaa2b9f405f9afa08e22fcdfb6c82397af74c6ee636bdaa97755", size = 2413651 },
+    { url = "https://files.pythonhosted.org/packages/d0/ef/d4cabd6260b179b53d6635d56b4e782f61f1b5d1f492baec0685c74b1899/granian-1.7.5-cp313-cp313-musllinux_1_1_x86_64.whl", hash = "sha256:647d35a80116de09c6fd9fcfafd2765037c11ffe4011c3e5d1bcb8a96adb556d", size = 2537432 },
+    { url = "https://files.pythonhosted.org/packages/5e/ec/53d849be95a70b83f3cfc69fc5d53298ea613429dc94fb6fc0fec4a29b2e/granian-1.7.5-cp313-cp313-win_amd64.whl", hash = "sha256:7c0ca5309543a6baedcd70922d49a455d72938a354c8e3e94c11179d3a40e4a2", size = 2477838 },
 ]
 
 [[package]]
@@ -207,7 +217,7 @@ version = "0.1.0"
 source = { virtual = "." }
 dependencies = [
     { name = "fastapi" },
-    { name = "uvicorn" },
+    { name = "granian" },
     { name = "uvloop" },
 ]
 
@@ -219,25 +229,12 @@ dev = [
 [package.metadata]
 requires-dist = [
     { name = "fastapi", specifier = ">=0.115.6" },
-    { name = "uvicorn", specifier = ">=0.34.0" },
+    { name = "granian", specifier = ">=1.7.5" },
     { name = "uvloop", specifier = ">=0.21.0" },
 ]
 
 [package.metadata.requires-dev]
 dev = [{ name = "black", specifier = ">=24.10.0" }]
-
-[[package]]
-name = "uvicorn"
-version = "0.34.0"
-source = { registry = "https://pypi.org/simple" }
-dependencies = [
-    { name = "click" },
-    { name = "h11" },
-]
-sdist = { url = "https://files.pythonhosted.org/packages/4b/4d/938bd85e5bf2edeec766267a5015ad969730bb91e31b44021dfe8b22df6c/uvicorn-0.34.0.tar.gz", hash = "sha256:404051050cd7e905de2c9a7e61790943440b3416f49cb409f965d9dcd0fa73e9", size = 76568 }
-wheels = [
-    { url = "https://files.pythonhosted.org/packages/61/14/33a3a1352cfa71812a3a21e8c9bfb83f60b0011f5e36f2b1399d51928209/uvicorn-0.34.0-py3-none-any.whl", hash = "sha256:023dc038422502fa28a09c7a30bf2b6991512da7dcdb8fd35fe57cfc154126f4", size = 62315 },
-]
 
 [[package]]
 name = "uvloop"

@@ -18,3 +18,4 @@ sudo curl -X PUT --data-binary "$(cat $dir/setup-wsgi.json)" \
 
 sudo systemctl restart unit
 
+sudo tail -f -n 40 /var/log/unit/unit.log

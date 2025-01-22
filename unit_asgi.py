@@ -1,4 +1,4 @@
-async def application(scope, receive, send):
+async def app(scope, receive, send):
 
     await send({
         'type': 'http.response.start',
